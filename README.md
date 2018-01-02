@@ -10,7 +10,7 @@
 
 # 使用protobuf文件生成java类
 1. 工程中的pom文件已配置protobuf生成java类插件
-2. 在terminal下首先执行protobuf:compile，然后再执行protobuf:compile-custom命令，执行成功后会在target目录下生成对应的java文件
+2. 在terminal下首先执行mvn protobuf:compile，然后再执行mvn protobuf:compile-custom命令，执行成功后会在target目录下生成对应的java文件
 
 # tts说明
 1. 向tts服务发送一段文本，tts服务会返回该文本对应的语音流
