@@ -24,7 +24,7 @@ import java.io.IOException;
 
 /**
  * tts demo
- * 参考文档 https://developer-dev.rokid.com/docs/3-ApiReference/openvoice-api.html
+ * 参考文档 https://developer.rokid.com/docs/3-ApiReference/openvoice-api.html
  * @author mashuangwei
  * @create 2018-01-02 11:21
  **/
