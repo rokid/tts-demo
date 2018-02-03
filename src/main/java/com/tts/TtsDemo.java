@@ -13,12 +13,12 @@ import java.net.URISyntaxException;
  * @create 2018-01-02 11:40
  **/
 
-public class TestTtsDemo {
+public class TtsDemo {
 
-    String key = "3E0EA7E206AB49A496E7DD76F40876B5";
-    String deviceTypeId = "649DCB3204ED413B9838B5C871026681";
-    String secret = "FF0D6ECE606B4A91810E5DEFC84E93CB";
-    String deviceId = "4281830E941842454BFA07852DFA35FD";
+    String key = "";
+    String deviceTypeId = "";
+    String secret = "";
+    String deviceId = "";
     String url = "wss://apigwws.open.rokid.com/api";
 
     @Test
@@ -29,8 +29,9 @@ public class TestTtsDemo {
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
+
         ttsBasic.init(key, deviceTypeId, secret, deviceId);
-        ttsBasic.sendTts("若琪打开车门","xmly","opu2");
+        ttsBasic.sendTts("今天天气怎么样","zh","pcm", 24000);
         ttsBasic.close();
     }
 }
