@@ -112,6 +112,10 @@ public class TtsBasic extends WebSocketClient {
      * @param sampleRate: 24000, 16000
      */
     public void sendTts(String text, String declaimer, String codec, int sampleRate) {
+        File file = new File(filePath);
+        if (!file.exists()) {
+            file.mkdirs();
+        }
         fileName = filePath + new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new Date()) + "." + codec;
         Tts.TtsRequest ttsRequest = Tts.TtsRequest.newBuilder().setId(new Random().nextInt()).setDeclaimer(declaimer).setCodec(codec).setText(text).setSampleRate(sampleRate).build();
         this.send(ttsRequest.toByteArray());
